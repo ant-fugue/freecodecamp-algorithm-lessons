@@ -6,20 +6,23 @@
 */
 
 const sumAll = (arr) => {
-  let numList = []
-  const iota = (min, max) => {
-    let tmp
-    if (max < min) {
-      tmp = max
-      max = min
-      min = tmp  
+  if (arr.length <= 1) return 'undefined: array must contains more than 2 elements'
+  else {
+    let numList = []
+    const iota = (min, max) => {
+      let tmp
+      if (max < min) {
+        tmp = max
+        max = min
+        min = tmp  
+      }
+      for (let i = min; i < max + 1; i++) {
+        numList.push(i)
+      }
     }
-    for (let i = min; i < max + 1; i++) {
-      numList.push(i)
-    }
+    iota(arr[0], arr[1])
+    return numList.reduce((previous, current) => previous + current)
   }
-  iota(arr[0], arr[1])
-  return numList.reduce((previous, current) => previous + current)
 }
 
 module.exports = sumAll

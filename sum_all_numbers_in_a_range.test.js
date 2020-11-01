@@ -14,6 +14,12 @@ test('smoke tests', smokeTest)
 
 // edge case test
 
+const edgeCaseTest = () => {
+  expect(sumAll([])).toBe('undefined: array must contains more than 2 elements')
+  expect(sumAll([1])).toBe('undefined: array must contains more than 2 elements')
+}
+test('test edge cases', edgeCaseTest)
+
 // automatically generated test for random cases
 
 // theoretical test
