@@ -27,4 +27,12 @@ const destroyer = (arr, ...args) => {
   return arr
 }
 
+const generateRandomNumArray = (maxArraySize, maxValue) => {
+  const arraySize = Math.floor(Math.random() * maxArraySize)
+  const randomArray = new Array(arraySize).fill(0)
+  return randomArray.map((elem) => Math.floor(Math.random() * maxValue))
+}
+const generateRandomNumArgs = () => {}
+
+// console.log(generateRandomNumArray(100, 1000))
 module.exports = destroyer
