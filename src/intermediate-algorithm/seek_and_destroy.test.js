@@ -16,8 +16,19 @@ const smokeTest = () => {
 test('smoke tests', smokeTest)
 
 // edge case test
+const edgeCaseTest = () => {
+  expect(destroyer([1, 2, 3])).toEqual([1, 2, 3])
+  // expect(destroyer([1, 2, 3, 1, 2], [2, 3])).toEqual(?)
+}
 
+test('edge case tests', edgeCaseTest)
 // automatically generated test for random cases
+const generateRandomArray = (maxArraySize, maxValue) => {
+  const arraySize = Math.floor(Math.random() * maxArraySize)
+  const randomArray = new Array(arraySize)
+  randomArray.map((elem) => Math.floor(Math.random * maxValue))
+  return randomArray
+}
 
 // theoretical test
 
