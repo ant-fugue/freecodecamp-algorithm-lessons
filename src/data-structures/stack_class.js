@@ -21,6 +21,9 @@ class Stack {
   peek() {
     return this.collection[this.collection.length - 1]
   }
+  size() {
+    return this.collection.length
+  }
   isEmpty() {
     if (this.collection.length === 0) return true
     else return false
