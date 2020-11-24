@@ -1,5 +1,5 @@
 const { test, expect } = require('@jest/globals')
-const diffArray = require('./diff_two_arrays')
+const diffArray = require('../intermediate-algorithm/diff_two_arrays')
 
 // smoke test
 

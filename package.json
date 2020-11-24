@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/searchingforapuppy/freecodecamp-algorithm-lessons#readme",
   "devDependencies": {
+    "eslint": "^7.14.0",
     "jest": "^26.6.1"
   }
 }
