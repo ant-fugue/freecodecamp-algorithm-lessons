@@ -1,5 +1,5 @@
 const { test, expect } = require('@jest/globals')
-const Stack = require('./stack_class')
+const Stack = require('../data-structures/stack_class')
 
 // smoke test
 

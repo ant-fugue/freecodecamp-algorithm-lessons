@@ -1,5 +1,5 @@
 const { test, expect } = require('@jest/globals')
-const destroyer = require('./seek_and_destroy')
+const destroyer = require('../intermediate-algorithm/seek_and_destroy')
 
 // smoke test
 

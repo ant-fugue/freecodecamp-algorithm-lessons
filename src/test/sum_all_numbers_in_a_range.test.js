@@ -1,6 +1,5 @@
 const { test, expect } = require('@jest/globals')
-const sumAll = require('./sum_all_numbers_in_a_range')
-
+const sumAll = require('../intermediate-algorithm/sum_all_numbers_in_a_range')
 
 // smoke test
 
@@ -16,7 +15,9 @@ test('smoke tests', smokeTest)
 
 const edgeCaseTest = () => {
   expect(sumAll([])).toBe('undefined: array must contains more than 2 elements')
-  expect(sumAll([1])).toBe('undefined: array must contains more than 2 elements')
+  expect(sumAll([1])).toBe(
+    'undefined: array must contains more than 2 elements'
+  )
 }
 test('test edge cases', edgeCaseTest)
 

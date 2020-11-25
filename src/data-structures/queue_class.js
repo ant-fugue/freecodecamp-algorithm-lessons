@@ -19,7 +19,7 @@ class Queue {
     this.collection.push(val)
   }
 
-  // removes the front element from queue and returns it
+  // removes the first element from queue and returns it
   dequeue() {
     return this.collection.shift()
   }
