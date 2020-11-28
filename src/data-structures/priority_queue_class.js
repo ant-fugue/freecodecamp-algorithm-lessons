@@ -9,25 +9,23 @@
 
 class PriorityQueue {
   constructor() {
-    let collection = []
-    this.collection = collection
-    this.print = () => console.log(collection)
+    this.collection = []
+    this.print = () => console.log(this.collection)
   }
-  // pushes an element to the tail of the queue
-  enqueue(arr) {
-    this.collection.push(arr)
 
-    // for (let i = 0; i < this.collection.length; i++) {
-    //   if (this.collection === []) {
-    //     this.collection.push(arr)
-    //     break
-    //   } else if (arr[1] === this.collection[i][1]) {
-    //     let tmp = this.collection[i - 1]
-    //     this.collection.splice(i - 1, 1, arr)
-    //     this.collection.splice(i)
-    //     break
-    //   }
-    // }
+  // I couldn't work well, so I referenced this page for the enqueue method
+  // https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-create-a-priority-queue-class/301630
+  // I'm not really sure how this method works well...
+  // I"ll write more test and check how it works and its limitation
+  enqueue(arr) {
+    this.collection = this.collection.reverse()
+    let found_index = this.collection.findIndex((item) => item[1] <= arr[1])
+    if (found_index === -1) {
+      this.collection.push(arr)
+    } else {
+      this.collection.splice(found_index, 0, arr)
+    }
+    this.collection = this.collection.reverse()
   }
 
   // removes the first element from queue and returns it
@@ -56,5 +54,13 @@ class PriorityQueue {
     this.collection = []
   }
 }
+
+// const q = new PriorityQueue()
+// q.enqueue(['a', 1])
+// q.print()
+// q.enqueue(['b', 1])
+// q.print()
+// q.enqueue(['c', 1])
+// q.print()
 
 module.exports = PriorityQueue
