@@ -6,18 +6,24 @@ const PriorityQueue = require('../data-structures/priority_queue_class')
 const smokeTest = () => {
   const q = new PriorityQueue()
   expect(q.size()).toEqual(0)
-  q.enqueue(['a', 1])
-  q.enqueue(['b', 1])
-  q.enqueue(['c', 1])
-  expect(q.size()).toEqual(3)
+  q.enqueue(['apple', 3])
+  q.enqueue(['banana', 2])
+  q.enqueue(['crab', 1])
+  q.enqueue(['dog', 1])
+  q.enqueue(['ebook', 2])
+  q.enqueue(['fun', 3])
+  expect(q.size()).toEqual(6)
   expect(q.collection).toEqual([
-    ['a', 1],
-    ['b', 1],
-    ['c', 1],
+    ['crab', 1],
+    ['dog', 1],
+    ['banana', 2],
+    ['ebook', 2],
+    ['apple', 3],
+    ['fun', 3],
   ])
-  expect(q.front()).toEqual('a')
+  expect(q.front()).toEqual('crab')
   q.dequeue()
-  expect(q.front()).toEqual('b')
+  expect(q.front()).toEqual('dog')
   expect(q.isEmpty()).toBe(false)
   q.clear()
   expect(q.isEmpty()).toBe(true)

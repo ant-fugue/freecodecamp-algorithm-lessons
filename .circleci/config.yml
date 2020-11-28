@@ -16,6 +16,8 @@ jobs:
           app-dir: ~/freecodecamp
           cache-path: node_modules
           override-ci-command: npm i
+      # No application is added on testing, so
+      # I make tests run in a build process, not in a differenct process.
       - run:
           name: Test
           command: npm test
